@@ -1,3 +1,10 @@
+/** Я брал с интернета,я в том смысле что мне не стоить умничать 
+* перед вами и я не знаю библиотеку где найти,хотя да ...
+* не усердно искал... Но блин мне жутко хочется освоить этот *** язык
+*  но не знаю с чего начать , что в нем делать и т.п. 
+* Да мне нужен наставник...Да желание гаснет без усилия...(
+*/
+
 import java.util.*;
 import java.util.Scanner;
 public class Hello {
@@ -7,11 +14,23 @@ public class Hello {
         Scanner inp= new Scanner(System.in);
         int num1,num2;
         num1 = inp.nextInt();
+        if(num1=>11){
+        System.out.println("Number is more than 10!");
+        return;
+        }else{
+        choose=inp.nextInt();
+        }        
         num2 = inp.nextInt();
+        if(num2=>11){
+        System.out.println("Number is more than 10!");
+        return; //rekursiya zdes pomoglo bi no ne znayu kak primenit
+        }else{
+         System.out.println(ans);
+       }
         int ans;
-        System.out.println("Enter your selection: 1 for Addition, 2 for substraction 3 for Multiplication and 4 for division:");
+     //   System.out.println("Enter your selection: + for Addition,  for substraction 3 for Multiplication and 4 for division:");
         int choose;
-        choose = inp.nextInt();
+ //       choose = inp.nextInt();
         switch (choose){
         case 1:
             System.out.println(add( num1,num2));
@@ -27,30 +46,24 @@ public class Hello {
             break;
             default:
                 System.out.println("Illigal Operation");
-
-
-        }
-
-
-
+       }
     }
-    public static int add(int x, int y)
-    {
+  //  public static int num1(){
+    //
+ //   }
+    public static int add(int x, int y){
         int result = x + y;
         return result;
     }
-    public static int sub(int x, int y)
-    {
+    public static int sub(int x, int y){
         int result = x-y;
         return result;
     }
-    public static int mult(int x, int y)
-    {
+    public static int mult(int x, int y){
         int result = x*y;
         return result;
     }
-    public static int div(int x, int y)
-    {
+    public static int div(int x, int y){
         int result = x/y;
         return result;
     }
